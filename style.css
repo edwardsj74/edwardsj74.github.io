@@ -1,18 +1,20 @@
 /* ===========================================
    CASTLEVANIA CHRONICLES — COMPLETE STYLE.CSS
-   Scrollable version
+   Scrollable Version
+   Author: Jordan Edwards
    =========================================== */
 
 /* GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Spectral+SC:wght@400;600&display=swap');
 
 /* UNIVERSAL STYLES */
-body {
+html, body {
   margin: 0;
   padding: 0;
+  height: auto; /* allow natural height for scrolling */
   font-family: 'Spectral SC', serif;
   color: #e6d9c3;
-  overflow-x: hidden; /* horizontal scroll hidden, vertical scroll allowed */
+  overflow-x: hidden; /* hide horizontal scroll */
   background: #000;
 }
 
@@ -20,16 +22,14 @@ body {
    LANDING PAGE
    ================================ */
 .landing {
-  background: url('https://wallpaperaccess.com/full/2310645.jpg') no-repeat center center fixed;
-  background-size: cover;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* allows scrolling */
+  display: block; /* allow natural flow for scrolling */
+  min-height: 100vh; /* at least full viewport height */
   text-align: center;
   color: #e6d9c3;
   position: relative;
-  padding-top: 3em;
+  padding: 3em 1em 5em 1em; /* bottom padding for scroll */
+  background: url('https://wallpaperaccess.com/full/2310645.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
 /* Dark overlay for readability */
@@ -116,11 +116,7 @@ nav a.active {
 
 /* LANDING CONTENT */
 .landing-content {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 2em;
+  padding: 2em 1em;
 }
 
 .overlay-box {
@@ -129,12 +125,11 @@ nav a.active {
   border-radius: 10px;
   padding: 2em;
   max-width: 800px;
-  margin: 3em auto;
+  margin: 3em auto; /* allow scroll */
   box-shadow: 0 0 25px #300;
   backdrop-filter: blur(3px);
 }
 
-/* Overlay headings and text */
 .overlay-box h2 {
   font-family: 'Cinzel', serif;
   color: #b30000;
@@ -186,7 +181,7 @@ nav a.active {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   width: 90%;
-  margin: 2em auto;
+  margin: 2em auto; /* allows scroll */
 }
 
 .timeline-grid .event {
@@ -355,4 +350,3 @@ footer a:hover {
     height: 250px;
   }
 }
-

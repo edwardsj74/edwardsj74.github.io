@@ -29,7 +29,8 @@ body {
   text-align: center;
   color: #e6d9c3;
   position: relative;
-  overflow: hidden;
+  overflow-y: auto; /* allow vertical scroll */
+  overflow-x: hidden; /* still prevent horizontal scroll */
 }
 
 /* Dark transparent overlay for readability */

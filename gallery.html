@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games Gallery - Castlevania Chronicles</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games Gallery: Castlevania Chronicles</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Spectral+SC:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body>
-<header>
-    <h1>Castlevania Game Gallery</h1>
+<body class="landing">
+  <audio id="hover-sound" src="https://www.vgmuseum.com/mrp/vkill/music/02.mp3" preload="auto"></audio>
+
+  <header>
+    <h1 class="flicker">Castlevania Games Gallery</h1>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="history.html">Timeline</a></li>
-            <li><a href="games.html" class="active">Games</a></li>
-            <li><a href="legacy.html">Legacy</a></li>
-        </ul>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="history.html">Timeline</a></li>
+        <li><a href="games.html" class="active">Games</a></li>
+        <li><a href="legacy.html">Legacy</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<main class="gallery">
-    <div class="game">
-        <img src="https://m.media-amazon.com/images/I/61h0mJYc+uL._AC_UF1000,1000_QL80_.jpg" alt="Portrait of Ruin">
-        <h3>Portrait of Ruin (2006)</h3>
+  <main class="gallery">
+    <div class="game fade-in">
+      <img src="https://m.media-amazon.com/images/I/61h0mJYc+uL._AC_UF1000,1000_QL80_.jpg" alt="Portrait of Ruin">
+      <h3>Portrait of Ruin (2006)</h3>
     </div>
-    <div class="game">
-        <img src="https://m.media-amazon.com/images/I/61GZ5v-g7EL._AC_UF1000,1000_QL80_.jpg" alt="Order of Ecclesia">
-        <h3>Order of Ecclesia (2008)</h3>
+    <div class="game fade-in">
+      <img src="https://m.media-amazon.com/images/I/61GZ5v-g7EL._AC_UF1000,1000_QL80_.jpg" alt="Order of Ecclesia">
+      <h3>Order of Ecclesia (2008)</h3>
     </div>
-    <div class="game">
-        <img src="https://m.media-amazon.com/images/M/MV5BMjAzMjU2MjYzMl5BMl5BanBnXkFtZTgwNTQ4Nzk1NjM@._V1_.jpg" alt="Castlevania Netflix">
-        <h3>Netflix Series Adaptation (2017–2021)</h3>
+    <div class="game fade-in">
+      <img src="https://m.media-amazon.com/images/M/MV5BMjAzMjU2MjYzMl5BMl5BanBnXkFtZTgwNTQ4Nzk1NjM@._V1_.jpg" alt="Castlevania Netflix">
+      <h3>Netflix Series (2017–2021)</h3>
     </div>
-</main>
+  </main>
 
-<footer>
-    <p>Watch the official tralier <a href="https://www.youtube.com/watch?v=m3jNb7IdJHQ" target="_blank">Castlevania Netflix Series</a></p>
-</footer>
+  <footer>
+    <p>Watch the official tralier<a href="<iframe width="791" height="445" src="https://www.youtube.com/embed/m3jNb7IdJHQ" title="Castlevania: Season 1 - Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" target="_blank">Castlevania Series</a></p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

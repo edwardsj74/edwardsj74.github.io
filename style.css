@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    font-family: 'Spectral SC', serif;
+    color: #e5dada;
+    background-color: #0b0b0b;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    background: rgba(20, 0, 0, 0.85);
+    padding: 1em 0;
+    border-bottom: 2px solid #5b0000;
+}
+
+header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5em;
+    color: #b30000;
+}
+
+.author {
+    font-size: 1em;
+    color: #c0bfbf;
+    margin-top: -10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #d4a5a5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a.active, nav a:hover {
+    color: #ff0000;
+    text-shadow: 0 0 10px crimson;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background: rgba(20, 0, 0, 0.85);
+    border-top: 2px solid #5b0000;
+}
+
+/* Landing Page */
+.landing {
+    background: url('images/castlebg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.overlay-text {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 3em;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.overlay-text h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2em;
+    color: #ff4d4d;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    background: #660000;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #b30000;
+    box-shadow: 0 0 10px crimson;
+}
+
+/* Timeline */
+.timeline {
+    width: 80%;
+    margin: auto;
+    padding: 2em 0;
+}
+
+.timeline .event {
+    background: rgba(30, 0, 0, 0.8);
+    margin: 20px 0;
+    padding: 1.5em;
+    border-left: 4px solid #b30000;
+    border-radius: 10px;
+}
+
+.timeline img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+    padding: 2em 0;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px crimson;
+}
+
+/* Legacy */
+.legacy {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 2em 0;
+}
+
+.legacy iframe {
+    margin-top: 20px;
+    border: 3px solid #b30000;
+    border-radius: 10px;
+}

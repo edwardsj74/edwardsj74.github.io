@@ -1,6 +1,5 @@
 /* ===========================================
-   CASTLEVANIA CHRONICLES — COMPLETE STYLE.CSS
-   Scrollable Version
+   CASTLEVANIA CHRONICLES — FULL SCROLLABLE CSS
    Author: Jordan Edwards
    =========================================== */
 
@@ -11,46 +10,38 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: auto; /* allow natural height for scrolling */
+  height: auto; /* natural height */
   font-family: 'Spectral SC', serif;
   color: #e6d9c3;
-  overflow-x: hidden; /* hide horizontal scroll */
   background: #000;
+  overflow-x: hidden; /* hide horizontal scroll */
 }
 
 /* ================================
    LANDING PAGE
    ================================ */
 .landing {
-  display: block; /* allow natural flow for scrolling */
-  min-height: 100vh; /* at least full viewport height */
+  display: block; /* use block for scrollable content */
+  min-height: 100vh;
   text-align: center;
-  color: #e6d9c3;
   position: relative;
-  padding: 3em 1em 5em 1em; /* bottom padding for scroll */
+  padding: 3em 1em 5em 1em; /* bottom padding ensures scroll if overlay grows */
   background: url('https://wallpaperaccess.com/full/2310645.jpg') no-repeat center center fixed;
   background-size: cover;
+  color: #e6d9c3;
 }
 
-/* Dark overlay for readability */
 .landing::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(10, 0, 0, 0.75);
+  background: rgba(10,0,0,0.75);
   z-index: 0;
 }
 
-/* Content above overlay */
 header, .landing-content, footer {
   position: relative;
   z-index: 1;
-}
-
-/* HEADER */
-header {
-  text-align: center;
-  padding: 2em 1em;
 }
 
 header h1 {
@@ -67,10 +58,10 @@ header h1 {
   margin-top: -0.5em;
 }
 
-/* FLICKERING TITLE ANIMATION */
+/* FLICKER ANIMATION */
 @keyframes flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
-  20%, 24%, 55% { opacity: 0.4; }
+  0%,19%,21%,23%,25%,54%,56%,100% { opacity:1; }
+  20%,24%,55% { opacity:0.4; }
 }
 
 /* NAVIGATION */
@@ -102,60 +93,25 @@ nav a::after {
   transition: width 0.3s ease;
 }
 
-nav a:hover {
-  color: #ff0000;
-}
+nav a:hover { color: #ff0000; }
+nav a:hover::after { width: 100%; }
+nav a.active { color: #ff6666; }
 
-nav a:hover::after {
-  width: 100%;
-}
-
-nav a.active {
-  color: #ff6666;
-}
-
-/* LANDING CONTENT */
-.landing-content {
-  padding: 2em 1em;
-}
-
+/* LANDING OVERLAY */
 .overlay-box {
-  background: rgba(10, 0, 0, 0.6);
+  background: rgba(10,0,0,0.6);
   border: 1px solid #b30000;
   border-radius: 10px;
   padding: 2em;
   max-width: 800px;
-  margin: 3em auto; /* allow scroll */
+  margin: 3em auto;
   box-shadow: 0 0 25px #300;
   backdrop-filter: blur(3px);
 }
 
-.overlay-box h2 {
-  font-family: 'Cinzel', serif;
-  color: #b30000;
-  margin-bottom: 0.5em;
-}
+.overlay-box h2 { font-family: 'Cinzel', serif; color: #b30000; margin-bottom: 0.5em; }
+.overlay-box p { font-size: 1.1em; line-height: 1.7; }
 
-.overlay-box p {
-  font-size: 1.1em;
-  line-height: 1.7;
-}
-
-/* FADE-IN ANIMATION */
-.overlay-box.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1.5s ease-out forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* BUTTONS */
 .button {
   display: inline-block;
   padding: 0.75em 1.5em;
@@ -174,18 +130,20 @@ nav a.active {
 }
 
 /* ================================
-   TIMELINE PAGE (history.html)
+   TIMELINE PAGE
    ================================ */
 .timeline-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   width: 90%;
-  margin: 2em auto; /* allows scroll */
+  margin: 2em auto;
+  position: relative; /* ensures content shows */
+  z-index: 1;
 }
 
 .timeline-grid .event {
-  background: rgba(30, 0, 0, 0.85);
+  background: rgba(30,0,0,0.85);
   border: 1px solid #b30000;
   border-radius: 10px;
   padding: 1em;
@@ -206,7 +164,7 @@ nav a.active {
 }
 
 /* ================================
-   GAME GALLERY PAGE (games.html)
+   GAMES PAGE
    ================================ */
 .gallery-grid {
   display: grid;
@@ -214,10 +172,12 @@ nav a.active {
   gap: 30px;
   width: 90%;
   margin: 2em auto;
+  position: relative;
+  z-index: 1;
 }
 
 .card {
-  background: rgba(25, 0, 0, 0.85);
+  background: rgba(25,0,0,0.85);
   border: 1px solid #b30000;
   border-radius: 10px;
   text-align: center;
@@ -248,16 +208,18 @@ nav a.active {
 }
 
 /* ================================
-   LEGACY PAGE (legacy.html)
+   LEGACY PAGE
    ================================ */
 .legacy {
   max-width: 900px;
   margin: 3em auto;
   padding: 2em;
-  background: rgba(20, 0, 0, 0.8);
+  background: rgba(20,0,0,0.8);
   border: 1px solid #b30000;
   border-radius: 10px;
   box-shadow: 0 0 20px #300;
+  position: relative;
+  z-index: 1;
 }
 
 .legacy h2, .legacy h3 {
@@ -300,19 +262,13 @@ footer {
   padding: 1.5em;
   font-size: 0.9em;
   color: #ccc;
-  background: rgba(10, 0, 0, 0.8);
+  background: rgba(10,0,0,0.8);
   border-top: 1px solid #b30000;
   margin-top: 3em;
 }
 
-footer a {
-  color: #ff6666;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
+footer a { color: #ff6666; text-decoration: none; }
+footer a:hover { text-decoration: underline; }
 
 /* ================================
    GENERAL FADE-IN ANIMATION
@@ -337,16 +293,12 @@ footer a:hover {
     gap: 1em;
   }
 
-  header h1 {
-    font-size: 2em;
-  }
+  header h1 { font-size: 2em; }
 
   .landing-content, .overlay-box, .timeline-grid, .gallery-grid, .legacy {
     width: 95%;
     padding: 1em;
   }
 
-  .legacy iframe {
-    height: 250px;
-  }
+  .legacy iframe { height: 250px; }
 }

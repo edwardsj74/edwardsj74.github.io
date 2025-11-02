@@ -20,121 +20,82 @@ body {
    LANDING PAGE
    ================================ */
 .landing {
-  background: url('https://wallpaperaccess.com/full/2310645.jpg') no-repeat center center fixed;
-  background-size: cover;
+  position: relative;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   text-align: center;
   color: #e6d9c3;
-  position: relative;
-  overflow-y: auto; /* allow vertical scroll */
-  overflow-x: hidden; /* still prevent horizontal scroll */
+  background: url('https://wallpaperaccess.com/full/2310645.jpg') no-repeat center center fixed;
+  background-size: cover;
+  overflow-x: hidden;
+  padding: 3em 1em 5em 1em; /* bottom padding for scroll */
 }
 
-/* Dark transparent overlay for readability */
+/* Dark overlay for readability */
 .landing::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(10, 0, 0, 0.75);
-  z-index: 0;
-}
-
-/* Keep content above overlay */
-header, .landing-content, footer {
-  position: relative;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
   z-index: 1;
 }
 
-/* HEADER */
+/* Fog overlay */
+.fog {
+  position: absolute;
+  inset: 0;
+  background: url('https://i.ibb.co/2N3JY6q/fog.png') repeat;
+  opacity: 0.15;
+  animation: drift 60s linear infinite;
+  z-index: 2;
+}
+
+@keyframes drift {
+  0% { background-position: 0 0; }
+  100% { background-position: 2000px 0; }
+}
+
+/* Header / Title */
 header {
-  text-align: center;
-  padding: 2em 1em;
+  position: relative;
+  z-index: 3;
+  margin-top: 10vh;
 }
 
 header h1 {
   font-family: 'Cinzel', serif;
-  font-size: 2.8em;
+  font-size: 4em;
   color: #b30000;
-  text-shadow: 0 0 15px #300;
+  text-shadow: 0 0 20px #300;
   animation: flicker 3s infinite;
 }
 
-.subtitle {
-  font-size: 1.1em;
+header .subtitle {
+  font-size: 1.2em;
   color: #ccc;
-  margin-top: -0.5em;
+  margin-top: 0.5em;
 }
 
-/* FLICKERING TITLE ANIMATION */
+/* Flicker animation for title */
 @keyframes flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
-  20%, 24%, 55% { opacity: 0.4; }
+  0%,19%,21%,23%,25%,54%,56%,100% { opacity:1; }
+  20%,24%,55% { opacity:0.4; }
 }
 
-/* NAVIGATION */
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 2em;
-  margin-top: 1em;
-}
-
-nav a {
-  text-decoration: none;
-  color: #e6d9c3;
-  font-weight: bold;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-nav a::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #b30000;
-  transition: width 0.3s ease;
-}
-
-nav a:hover {
-  color: #ff0000;
-}
-
-nav a:hover::after {
-  width: 100%;
-}
-
-nav a.active {
-  color: #ff6666;
-}
-
-/* LANDING CONTENT */
-.landing-content {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2em;
-}
-
+/* Overlay Box */
 .overlay-box {
-  background: rgba(10, 0, 0, 0.6);
+  position: relative;
+  z-index: 3;
+  background: rgba(10,0,0,0.6);
   border: 1px solid #b30000;
   border-radius: 10px;
   padding: 2em;
-  max-width: 800px;
+  max-width: 700px;
+  margin: 3em auto;
   box-shadow: 0 0 25px #300;
   backdrop-filter: blur(3px);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 2s forwards 1s;
 }
 
 .overlay-box h2 {
@@ -148,13 +109,7 @@ nav a.active {
   line-height: 1.7;
 }
 
-/* FADE-IN ANIMATION */
-.overlay-box.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1.5s ease-out forwards;
-}
-
+/* Fade-in animation for overlay */
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -162,7 +117,7 @@ nav a.active {
   }
 }
 
-/* BUTTONS */
+/* Buttons */
 .button {
   display: inline-block;
   padding: 0.75em 1.5em;
@@ -172,6 +127,7 @@ nav a.active {
   border-radius: 5px;
   text-decoration: none;
   margin-top: 1.5em;
+  cursor: pointer;
   transition: 0.3s;
 }
 

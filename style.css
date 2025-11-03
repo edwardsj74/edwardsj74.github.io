@@ -243,7 +243,6 @@ nav a.active {
   line-height: 1.6;
   color: #ccc;
 }
-
 .timeline-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -293,6 +292,7 @@ nav a.active {
   padding: 1.5em;
   transition: transform 0.3s ease;
   gap: 2em;
+  overflow: hidden;
 }
 
 .game-entry:nth-child(even) {
@@ -313,5 +313,17 @@ nav a.active {
   line-height: 1.6;
 }
 
-.game-image img
+/* ✅ FIXED IMAGE CONTAINMENT */
+.game-image {
+  flex-shrink: 0;
+  max-width: 280px;
+  overflow: hidden;
+}
+
+.game-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #b
 

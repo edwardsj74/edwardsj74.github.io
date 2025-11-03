@@ -89,7 +89,7 @@ header h1.mega-title {
 .overlay-box,
 .overlay-box h2,
 .overlay-box p {
-  font-family: 'Cinzel', serif;
+  font-family: 'Cinzel', serif !important;
 }
 
 @keyframes flicker {
@@ -313,6 +313,5 @@ nav a.active {
   line-height: 1.6;
 }
 
-.game-image img {
-  width: 280px
+.game-image img
 

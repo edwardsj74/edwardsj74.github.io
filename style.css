@@ -11,40 +11,26 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Spectral SC', serif;
-  background: #000;
-  color: #e6d9c3;
-  overflow-x: hidden;
-}
-
-/* ================================
-   LANDING PAGE
-   ================================ */
-.landing {
   background: url('https://wallpaperaccess.com/full/2310645.jpg') no-repeat center center fixed;
   background-size: cover;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
   color: #e6d9c3;
-  position: relative;
-  overflow-y: auto;
   overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
 }
 
-.landing::before {
+body::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(10, 0, 0, 0.75);
-  z-index: 0;
+  z-index: -1;
 }
 
-header, .landing-content, footer {
+header, main, section, footer {
   position: relative;
   z-index: 1;
 }
@@ -127,6 +113,23 @@ nav a.active {
   color: #ff6666;
 }
 
+/* HERO SECTION */
+.hero-header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 0 30px #b30000;
+}
+
 /* LANDING CONTENT */
 .landing-content {
   flex: 1;
@@ -202,49 +205,36 @@ nav a.active {
   100% { transform: scale(1); box-shadow: 0 0 10px crimson; }
 }
 
-/* HERO SECTION */
-.hero-header {
-  background: url('https://wallpaperaccess.com/full/2310645.jpg') center/cover no-repeat;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+/* TIMELINE PAGE */
+.timeline-section {
+  padding: 3em 1em;
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: center;
-}
-
-.hero-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 2em;
-  border-radius: 10px;
-  box-shadow: 0 0 30px #b30000;
 }
 
 .section-title {
   font-size: 2.5em;
   color: #ff3333;
   text-shadow: 0 0 10px #b30000;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5em;
+  font-family: 'Cinzel', serif;
 }
 
-.overlay-box.enhanced {
-  background: linear-gradient(145deg, rgba(10,0,0,0.7), rgba(30,0,0,0.6));
-  border: 2px solid #ff3333;
-  box-shadow: 0 0 40px #b30000;
-  transition: transform 0.3s ease;
+.section-intro {
+  font-size: 1.2em;
+  max-width: 800px;
+  margin: 0 auto 2em;
+  line-height: 1.6;
+  color: #ccc;
 }
 
-.overlay-box.enhanced:hover {
-  transform: scale(1.02);
-}
-
-/* TIMELINE PAGE */
 .timeline-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  width: 85%;
-  margin: 3em auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .timeline-grid .event {
@@ -269,44 +259,57 @@ nav a.active {
 }
 
 /* GAME GALLERY PAGE */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  width: 85%;
-  margin: 3em auto;
+.game-gallery {
+  max-width: 1000px;
+  margin: 4em auto;
+  padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
 }
 
-.card {
-  background: rgba(25, 0, 0, 0.85);
+.game-entry {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: rgba(20, 0, 0, 0.8);
   border: 1px solid #b30000;
   border-radius: 10px;
-  text-align: center;
-  padding: 1em;
-  transition: 0.3s ease;
+  box-shadow: 0 0 20px #300;
+  padding: 1.5em;
+  transition: transform 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px crimson;
+.game-entry:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px crimson;
 }
 
-.card img {
-  width: 100%;
+.game-text {
+  flex: 1;
+  padding-right: 1.5em;
+}
+
+.game-text h3 {
+  font-family: 'Cinzel', serif;
+  color: #ff3333;
+  margin-bottom: 0.5em;
+}
+
+.game-text p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.game-image img {
+  width: 280px;
   border-radius: 8px;
-  margin-bottom: 10px;
+  box-shadow: 0 0 10px #b30000;
 }
 
 /* LEGACY PAGE */
 .legacy {
   max-width: 900px;
-  margin: 3em auto;
+  margin: 4em auto;
   padding: 2em;
-  background: rgba(20, 0, 0, 0.8);
-  border: 1px solid #b30000;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #300;
-}
-
-.legacy h2, .legacy h3 {
-
+  background: rgba(20, 0, 0, 0.8

@@ -17,193 +17,157 @@ body {
 }
 
 /* ================================
+   PAGE TITLES
+   ================================ */
+.page-title {
+  font-family: 'Cinzel', serif;
+  font-size: 3em;
+  color: #b30000;
+  text-align: center;
+  text-shadow: 0 0 20px #300, 0 0 40px crimson;
+  margin: 2em 0;
+  animation: flicker 3s infinite;
+}
+
+/* ================================
    LANDING PAGE
    ================================ */
 .landing {
-  background: url('https://wallpaperaccess.com/full/2310645.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background: url('https://wallpaperaccess.com/full/2310645.jpg') center center/cover no-repeat fixed;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
   text-align: center;
   color: #e6d9c3;
   position: relative;
-  overflow-y: auto; /* allow vertical scroll */
-  overflow-x: hidden; /* still prevent horizontal scroll */
+  overflow-y: auto;
+  padding-top: 10vh;
 }
 
-/* Dark transparent overlay for readability */
 .landing::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(10, 0, 0, 0.75);
+  inset: 0;
+  background: rgba(0,0,0,0.75);
   z-index: 0;
 }
 
-/* Keep content above overlay */
-header, .landing-content, footer {
-  position: relative;
+.fog {
+  position: absolute;
+  inset: 0;
+  background: url('https://i.ibb.co/2N3JY6q/fog.png') repeat;
+  opacity: 0.12;
+  animation: drift 90s linear infinite;
   z-index: 1;
+}
+
+@keyframes drift {
+  0% { background-position: 0 0; }
+  100% { background-position: 2000px 0; }
 }
 
 /* HEADER */
 header {
-  text-align: center;
-  padding: 2em 1em;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 1em;
 }
 
 header h1 {
   font-family: 'Cinzel', serif;
-  font-size: 2.8em;
+  font-size: 5em;
   color: #b30000;
-  text-shadow: 0 0 15px #300;
+  text-shadow: 0 0 25px #300, 0 0 50px crimson;
   animation: flicker 3s infinite;
+  margin-bottom: 0.2em;
 }
 
 .subtitle {
-  font-size: 1.1em;
+  font-size: 1.5em;
   color: #ccc;
-  margin-top: -0.5em;
+  max-width: 800px;
+  margin: 0 auto 2em auto;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeIn 2s forwards 1s;
 }
 
-/* FLICKERING TITLE ANIMATION */
 @keyframes flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
-  20%, 24%, 55% { opacity: 0.4; }
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity:1; }
+  20%, 24%, 55% { opacity:0.4; }
 }
 
-/* NAVIGATION */
-nav ul {
-  list-style: none;
-  padding: 0;
+@keyframes fadeIn { to { opacity: 1; } }
+
+/* LANDING BUTTONS */
+.landing-buttons {
   display: flex;
   justify-content: center;
   gap: 2em;
-  margin-top: 1em;
+  flex-wrap: wrap;
+  margin-bottom: 5em;
+  z-index: 2;
 }
 
-nav a {
-  text-decoration: none;
-  color: #e6d9c3;
+.landing-buttons .button {
+  padding: 1em 2em;
+  font-size: 1.2em;
   font-weight: bold;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-nav a::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #b30000;
-  transition: width 0.3s ease;
-}
-
-nav a:hover {
-  color: #ff0000;
-}
-
-nav a:hover::after {
-  width: 100%;
-}
-
-nav a.active {
-  color: #ff6666;
-}
-
-/* LANDING CONTENT */
-.landing-content {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2em;
-}
-
-.overlay-box {
-  background: rgba(10, 0, 0, 0.6);
-  border: 1px solid #b30000;
-  border-radius: 10px;
-  padding: 2em;
-  max-width: 800px;
-  box-shadow: 0 0 25px #300;
-  backdrop-filter: blur(3px);
-}
-
-.overlay-box h2 {
-  font-family: 'Cinzel', serif;
-  color: #b30000;
-  margin-bottom: 0.5em;
-}
-
-.overlay-box p {
-  font-size: 1.1em;
-  line-height: 1.7;
-}
-
-/* FADE-IN ANIMATION */
-.overlay-box.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1.5s ease-out forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* BUTTONS */
-.button {
-  display: inline-block;
-  padding: 0.75em 1.5em;
-  background: #300;
+  border: 2px solid #b30000;
+  border-radius: 8px;
+  background: #200;
   color: #e6d9c3;
-  border: 1px solid #b30000;
-  border-radius: 5px;
   text-decoration: none;
-  margin-top: 1.5em;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
-.button:hover {
-  background: #600;
-  box-shadow: 0 0 15px crimson;
+.landing-buttons .button:hover {
+  background: #500;
+  box-shadow: 0 0 20px crimson, 0 0 40px red;
+  transform: translateY(-5px);
 }
 
 /* ================================
-   TIMELINE PAGE (history.html)
+   TIMELINE PAGE
    ================================ */
 .timeline-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  width: 85%;
-  margin: 3em auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+  width: 90%;
+  margin: 2em auto;
+  position: relative;
 }
 
 .timeline-grid .event {
+  position: relative;
+  width: 60%;
   background: rgba(30, 0, 0, 0.85);
   border: 1px solid #b30000;
   border-radius: 10px;
-  padding: 1em;
-  text-align: center;
-  box-shadow: 0 0 10px #300;
+  padding: 1.5em;
+  box-shadow: 0 0 15px #300;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.timeline-grid .event::after {
+  content: "➤";
+  position: absolute;
+  font-size: 2em;
+  color: crimson;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.timeline-grid .event:nth-child(odd)::after { left: -2em; }
+.timeline-grid .event:nth-child(even)::after { right: -2em; }
+
 .timeline-grid .event:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px crimson;
+  box-shadow: 0 0 25px crimson, 0 0 40px red;
 }
 
 .timeline-grid img {
@@ -213,28 +177,30 @@ nav a.active {
 }
 
 /* ================================
-   GAME GALLERY PAGE (games.html)
+   GAMES PAGE
    ================================ */
-.gallery-grid {
+.games-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  width: 85%;
-  margin: 3em auto;
+  gap: 2em;
+  width: 90%;
+  margin: 2em auto;
 }
 
 .card {
-  background: rgba(25, 0, 0, 0.85);
+  background: rgba(20, 0, 0, 0.9);
   border: 1px solid #b30000;
-  border-radius: 10px;
-  text-align: center;
+  border-radius: 12px;
   padding: 1em;
-  transition: 0.3s ease;
+  text-align: center;
+  box-shadow: 0 0 15px #300;
+  transition: all 0.4s ease;
+  transform: perspective(600px) rotateY(0deg);
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px crimson;
+  transform: perspective(600px) rotateY(10deg) scale(1.05);
+  box-shadow: 0 0 25px crimson, 0 0 40px red;
 }
 
 .card img {
@@ -243,8 +209,14 @@ nav a.active {
   margin-bottom: 10px;
 }
 
+.games-grid h3 {
+  font-family: 'Cinzel', serif;
+  color: #b30000;
+  margin-bottom: 0.5em;
+}
+
 /* ================================
-   LEGACY PAGE (legacy.html)
+   LEGACY PAGE
    ================================ */
 .legacy {
   max-width: 900px;
@@ -316,7 +288,7 @@ footer a:hover {
 }
 
 /* ================================
-   ANIMATIONS
+   FADE-IN ANIMATIONS
    ================================ */
 .fade-in {
   opacity: 0;
@@ -325,37 +297,19 @@ footer a:hover {
 }
 
 @keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* ================================
    RESPONSIVE DESIGN
    ================================ */
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 1em;
-  }
+  nav ul { flex-direction: column; gap: 1em; }
+  header h1 { font-size: 3em; }
+  .subtitle { font-size: 1.2em; }
+  .landing-buttons .button { font-size: 1em; padding: 0.75em 1.5em; }
+  .gallery-grid, .timeline-grid { width: 95%; }
+  .legacy iframe { height: 250px; }
+}
 
-  header h1 {
-    font-size: 2em;
-  }
-
-  .landing-content {
-    padding: 1em;
-  }
-
-  .gallery-grid, .timeline-grid {
-    width: 95%;
-  }
-
-  .overlay-box {
-    padding: 1.5em;
-  }
-
-  .legacy iframe {
-    height: 250px;
 

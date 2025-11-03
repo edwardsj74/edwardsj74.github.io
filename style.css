@@ -1,5 +1,5 @@
 /* ===========================================
-   CASTLEVANIA CHRONICLES — COMPLETE STYLE.CSS
+   CASTLEVANIA CHRONICLES — FINAL STYLE.CSS
    =========================================== */
 
 /* GOOGLE FONTS */
@@ -84,12 +84,6 @@ header h1.mega-title {
   20%, 24%, 63% { opacity: 0.3; }
 }
 
-.subtitle {
-  font-size: 1.1em;
-  color: #ccc;
-  margin-top: -0.5em;
-}
-
 /* NAVIGATION */
 nav ul {
   list-style: none;
@@ -124,7 +118,7 @@ nav a.active {
   color: #ff6666;
 }
 
-/* HERO SECTION */
+/* LANDING CONTENT */
 .hero-header {
   height: 100vh;
   display: flex;
@@ -141,7 +135,6 @@ nav a.active {
   box-shadow: 0 0 30px #b30000;
 }
 
-/* LANDING CONTENT */
 .landing-content {
   flex: 1;
   display: flex;
@@ -312,4 +305,7 @@ nav a.active {
   max-width: 900px;
   margin: 4em auto;
   padding: 2em;
-  background
+  background: rgba(20, 0, 0, 0.8);
+  border: 1px solid #b30000;
+  border-radius: 10px;
+  box-shadow

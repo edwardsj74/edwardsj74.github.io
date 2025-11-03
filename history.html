@@ -1,44 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Timeline: Castlevania Chronicles</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Spectral+SC:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Spectral+SC:wght@400;600&display=swap" rel="stylesheet"/>
 </head>
 <body class="landing">
   <audio id="hover-sound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_d0b2cf8f7a.mp3?filename=menu-select-110624.mp3" preload="auto"></audio>
 
-  <header>
-    <h1 class="flicker">The Evolution of Castlevania</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="history.html" class="active">Timeline</a></li>
-        <li><a href="games.html">Games</a></li>
-        <li><a href="legacy.html">Legacy</a></li>
-      </ul>
-    </nav>
+  <header class="hero-header">
+    <div class="hero-overlay">
+      <h1 class="mega-title">The Evolution of Castlevania</h1>
+      <p class="subtitle">A Journey Through Time, Bloodlines, and Darkness</p>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="history.html" class="active">Timeline</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="legacy.html">Legacy</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main class="timeline-grid">
-    <div class="event fade-in">
-      <img src="https://i.pinimg.com/564x/74/2b/a9/742ba97904b9eb198955201e3a805ee5.jpg" alt="Castlevania 1986">
-      <h3>1986: The Beginning</h3>
-      <p>The original <em>Castlevania</em> debuts on the NES, introducing Simon Belmont and Dracula’s cursed castle.</p>
-    </div>
-    <div class="event fade-in">
-      <img src="https://hoganreviews.co.uk/wp-content/uploads/2021/03/castlevania-symphony-of-the-night-1.jpg" alt="Symphony of the Night">
-      <h3>1997: Symphony of the Night</h3>
-      <p>Alucard’s journey redefined exploration and combat, creating the “Metroidvania” genre that still thrives today.</p>
-    </div>
-    <div class="event fade-in">
-      <img src="https://otakudome.com/wp-content/uploads/2014/02/Castlevania-Lords-of-Shadow-2-screen-20.jpg" alt="Lords of Shadow">
-      <h3>2010: Lords of Shadow</h3>
-      <p>A cinematic reimagining, blending myth and tragedy to reinvent the eternal war between light and darkness.</p>
-    </div>
-  </main>
+  <section class="timeline-section">
+    <h2 class="section-title">Chronicles of the Night</h2>
+    <p class="section-intro">
+      From pixelated beginnings to gothic masterpieces, explore the key milestones that shaped the Castlevania legacy.
+    </p>
+
+    <main class="timeline-grid">
+      <div class="event fade-in">
+        <img src="https://i.pinimg.com/564x/74/2b/a9/742ba97904b9eb198955201e3a805ee5.jpg" alt="Castlevania 1986">
+        <h3>1986: The Beginning</h3>
+        <p>The original <em>Castlevania</em> debuts on the NES, introducing Simon Belmont and Dracula’s cursed castle. Players follow Simon as he navigates treacherous halls filled with monsters, traps, and supernatural foes, all in pursuit of the vampire lord. Along the way, he must master his trusty whip and uncover hidden secrets to survive. The game’s dark gothic atmosphere and challenging gameplay set the stage for a legendary franchise.</p>
+      </div>
+      <div class="event fade-in">
+        <img src="https://hoganreviews.co.uk/wp-content/uploads/2021/03/castlevania-symphony-of-the-night-1.jpg" alt="Symphony of the Night">
+        <h3>1997: Symphony of the Night</h3>
+        <p>Alucard’s adventure helped shape the “Metroidvania” style, combining exploration, combat, and discovery. In Castlevania: Symphony of the Night, players explore a vast, interconnected castle full of hidden rooms, powerful upgrades, and secret paths that reward careful exploration. Its mix of action, RPG mechanics, and backtracking set a lasting standard for non-linear adventure games, inspiring countless titles that followed.</p>
+      </div>
+      <div class="event fade-in">
+        <img src="https://otakudome.com/wp-content/uploads/2014/02/Castlevania-Lords-of-Shadow-2-screen-20.jpg" alt="Lords of Shadow">
+        <h3>2010: Lords of Shadow</h3>
+        <p>A cinematic reimagining that weaves myth and tragedy into the timeless struggle between light and darkness. It follows heroes and villains whose choices shape the fate of the world, with every battle carrying high stakes. Rich visuals and immersive storytelling bring this epic tale to life, exploring themes of sacrifice, destiny, and the enduring fight between good and evil.</p>
+      </div>
+    </main>
+  </section>
 
   <footer>
     <p>Sources: <a href="https://en.wikipedia.org/wiki/Castlevania" target="_blank">Wikipedia</a> | <a href="https://www.konami.com/games/" target="_blank">Konami</a></p>

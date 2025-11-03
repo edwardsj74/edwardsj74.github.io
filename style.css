@@ -333,3 +333,11 @@ nav a.active {
   box-shadow: 0 0 10px #b30000;
   object-fit: cover;
 }
+
+footer {
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  padding: 2em 1em;
+  font-size: 0.9em;
+  color: #e6d9c3;
+}

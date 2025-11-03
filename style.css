@@ -342,3 +342,9 @@ footer {
   color: #e6d9c3;
 }
 
+/* Hide the GitHub Pages site name link at the top */
+.header a,
+.site-title,
+#site-title {
+    display: none;
+}

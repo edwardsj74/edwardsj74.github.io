@@ -52,6 +52,12 @@ header {
   padding: 2em 1em;
 }
 
+header h1,
+header h1.mega-title,
+.castle-sub {
+  font-family: 'Cinzel', serif;
+}
+
 header h1 {
   font-size: 2.8em;
   color: #b30000;
@@ -74,6 +80,16 @@ header h1.mega-title {
   margin-top: 0.5em;
   margin-bottom: 0;
   text-shadow: 0 0 5px #600;
+}
+
+/* Ensure Cinzel font on all landing elements */
+.hero-header,
+.hero-overlay,
+.landing-content,
+.overlay-box,
+.overlay-box h2,
+.overlay-box p {
+  font-family: 'Cinzel', serif;
 }
 
 @keyframes flicker {
@@ -298,15 +314,5 @@ nav a.active {
 }
 
 .game-image img {
-  width: 280px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #b30000;
-}
-
-/* LEGACY PAGE */
-.legacy {
-  max-width: 900px;
-  margin: 4em auto;
-  padding: 2em;
-  background: rgba(20, 0, 0, 0.8);
+  width: 280px
 

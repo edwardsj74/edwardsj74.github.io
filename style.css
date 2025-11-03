@@ -72,6 +72,57 @@ header h1.mega-title {
   animation: flickerMega 2.5s infinite;
 }
 
+/* Gothic Dracula Aura Around Title */
+header h1.mega-title {
+  position: relative;
+  font-size: 4em;
+  color: crimson;
+  text-shadow: 0 0 20px red, 0 0 40px darkred;
+  animation: flickerMega 2.5s infinite;
+  z-index: 1;
+}
+
+/* Blood Mist Glow */
+.mega-title::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(139,0,0,0.4) 0%, transparent 70%);
+  filter: blur(25px);
+  animation: bloodMist 6s infinite ease-in-out;
+  z-index: -1;
+}
+
+/* Shadow Pulse */
+.mega-title::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.5) 0%, transparent 80%);
+  filter: blur(15px);
+  animation: shadowPulse 4s infinite ease-in-out;
+  z-index: -2;
+}
+
+/* Animations */
+@keyframes bloodMist {
+  0%, 100% { opacity: 0.4; transform: translateX(-50%) scale(1); }
+  50% { opacity: 0.6; transform: translateX(-50%) scale(1.05); }
+}
+
+@keyframes shadowPulse {
+  0%, 100% { opacity: 0.5; transform: translateX(-50%) scale(1); }
+  50% { opacity: 0.7; transform: translateX(-50%) scale(1.03); }
+}
+
 .castle-sub {
   display: block;
   font-size: 1em;

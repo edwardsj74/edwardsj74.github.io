@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Legacy: Castlevania Chronicles</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Spectral+SC:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Spectral+SC:wght@400;600&display=swap" rel="stylesheet"/>
 </head>
-<body>
+<body class="landing">
   <audio id="hover-sound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_d0b2cf8f7a.mp3?filename=menu-select-110624.mp3" preload="auto"></audio>
 
-  <header>
-    <h1 class="flicker">The Legacy of Castlevania</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="history.html">Timeline</a></li>
-        <li><a href="games.html">Games</a></li>
-        <li><a href="legacy.html" class="active">Legacy</a></li>
-      </ul>
-    </nav>
+  <header class="hero-header">
+    <div class="hero-overlay">
+      <h1 class="mega-title">The Legacy of Castlevania</h1>
+      <p class="subtitle">A Gothic Tale That Transcends Generations</p>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="history.html">Timeline</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="legacy.html" class="active">Legacy</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main class="legacy fade-in">
+  <section class="legacy fade-in">
+    <div class="section-intro">
+      <p>
+        For nearly four decades, <em>Castlevania</em> has haunted the hearts of gamers and storytellers alike. 
+        Its legacy is carved in pixelated cathedrals, whispered through orchestral soundtracks, and immortalized in the bloodlines of the Belmont clan. 
+        This page explores how Castlevania became a cultural cornerstone of gothic fantasy and interactive storytelling.
+      </p>
+    </div>
+
     <h2>Why Castlevania Still Matters</h2>
     <p>
-      <em>Castlevania</em> is more than just a game franchise, it’s a gothic myth reborn in every era.  
-      Its influence can be seen in countless games, films, and anime.  
-      From its pixelated origins to Netflix’s acclaimed adaptation, the series’ dark romanticism continues to enchant fans.
+     Castlevania is more than just a game franchise, it’s a gothic myth reborn in every era.
+Its influence can be seen in countless games, films, and anime.
+From its pixelated origins to Netflix’s acclaimed adaptation, the series’ dark romanticism continues to enchant fans.
+Its legacy lies in its ability to evolve blending horror, tragedy, and heroism into timeless tales of the battle between light and darkness.
+Decade after decade, Castlevania endures as both a haunting story and a cultural touchstone, captivating new generations with every retelling.
     </p>
 
     <iframe 
@@ -39,10 +52,13 @@
     <h3>The Gothic Legacy</h3>
     <p>
       The series inspired the “Metroidvania” genre, influencing games like <em>Hollow Knight</em>, <em>Bloodstained</em>, and <em>Dark Souls</em>.  
-      Its gothic tone (stained glass, candlelight, ancient ruins) inspired a generation of creators who found beauty in darkness.
+     Its gothic tone stained glass, candlelight, ancient ruins—inspired a generation of creators who found beauty in darkness.
+The series’ haunting aesthetic and tragic storytelling shaped the visual language of modern fantasy and horror.
+From game design to animation, its influence echoes through worlds that embrace melancholy, mystery, and the allure of the forbidden.
+Castlevania showed that even in shadow, there is elegance and in every monster, a trace of humanity.
     </p>
 
-    <img src="https://i.pinimg.com/originals/d3/80/08/d38008ceab34c454d8d6a7f7bb937763.jpg" alt="Castlevania Concept Art" style="width:100%; border-radius:10px; margin-top:1em;">
+    <img src="https://i.pinimg.com/originals/d3/80/08/d38008ceab34c454d8d6a7f7bb937763.jpg" alt="Castlevania Concept Art" style="width:100%; border-radius:10px; margin-top:1em; box-shadow: 0 0 20px #b30000;">
 
     <h3>External Sources</h3>
     <ul>
@@ -51,8 +67,8 @@
       <li><a href="https://www.netflix.com/title/80095241" target="_blank">Netflix Series</a></li>
     </ul>
 
-    <a href="index.html" class="button">Return to Castle</a>
-  </main>
+    <a href="index.html" class="button pulse">Return to Castle</a>
+  </section>
 
   <footer>
     <p>© 2025 Jordan Edwards | Sources: Konami, Netflix, Wikipedia</p>
@@ -61,5 +77,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-

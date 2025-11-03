@@ -205,20 +205,25 @@ nav a.active {
   100% { transform: scale(1); box-shadow: 0 0 10px crimson; }
 }
 
+/* PAGE TITLES (smaller than landing) */
+.section-title,
+.timeline-section h2,
+.game-gallery h2,
+.legacy h2 {
+  font-size: 2.2em;
+  color: #ff3333;
+  font-family: 'Cinzel', serif;
+  text-shadow: 0 0 10px #b30000;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
 /* TIMELINE PAGE */
 .timeline-section {
   padding: 3em 1em;
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
-}
-
-.section-title {
-  font-size: 2.5em;
-  color: #ff3333;
-  text-shadow: 0 0 10px #b30000;
-  margin-bottom: 0.5em;
-  font-family: 'Cinzel', serif;
 }
 
 .section-intro {
@@ -258,7 +263,7 @@ nav a.active {
   margin-bottom: 10px;
 }
 
-/* GAME GALLERY PAGE */
+/* GAME GALLERY PAGE — ALTERNATING LAYOUT */
 .game-gallery {
   max-width: 1000px;
   margin: 4em auto;
@@ -270,7 +275,6 @@ nav a.active {
 
 .game-entry {
   display: flex;
-  flex-direction: row;
   align-items: center;
   background: rgba(20, 0, 0, 0.8);
   border: 1px solid #b30000;
@@ -278,16 +282,15 @@ nav a.active {
   box-shadow: 0 0 20px #300;
   padding: 1.5em;
   transition: transform 0.3s ease;
+  gap: 2em;
 }
 
-.game-entry:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 30px crimson;
+.game-entry:nth-child(even) {
+  flex-direction: row-reverse;
 }
 
 .game-text {
   flex: 1;
-  padding-right: 1.5em;
 }
 
 .game-text h3 {
@@ -307,9 +310,4 @@ nav a.active {
   box-shadow: 0 0 10px #b30000;
 }
 
-/* LEGACY PAGE */
-.legacy {
-  max-width: 900px;
-  margin: 4em auto;
-  padding: 2em;
-  background: rgba(20, 0, 0, 0.8
+/* LEGACY PAGE

@@ -1,44 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Games: Castlevania Chronicles</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Spectral+SC:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Spectral+SC:wght@400;600&display=swap" rel="stylesheet"/>
 </head>
 <body class="landing">
   <audio id="hover-sound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_d0b2cf8f7a.mp3?filename=menu-select-110624.mp3" preload="auto"></audio>
 
-  <header>
-    <h1 class="flicker">Castlevania Game Gallery</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="history.html">Timeline</a></li>
-        <li><a href="games.html" class="active">Games</a></li>
-        <li><a href="legacy.html">Legacy</a></li>
-      </ul>
-    </nav>
+  <header class="hero-header">
+    <div class="hero-overlay">
+      <h1 class="mega-title">Castlevania Game Gallery</h1>
+      <p class="subtitle">A Legacy of Magic, Monsters, and Masterpieces</p>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="history.html">Timeline</a></li>
+          <li><a href="games.html" class="active">Games</a></li>
+          <li><a href="legacy.html">Legacy</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main class="gallery-grid">
-    <div class="card fade-in">
-      <img src="https://m.media-amazon.com/images/I/61h0mJYc+uL._AC_UF1000,1000_QL80_.jpg" alt="Portrait of Ruin">
-      <h3>Portrait of Ruin (2006)</h3>
-      <p>Follow Jonathan and Charlotte through magical portraits to stop Dracula’s resurrection.</p>
+  <section class="game-gallery">
+    <div class="section-intro">
+      <p>
+        From haunted castles to cursed bloodlines, the Castlevania series has delivered unforgettable adventures across generations. 
+        This gallery showcases some of the most iconic entries from handheld classics to animated epics—that have shaped the franchise’s gothic legacy. 
+        Prepare to meet heroes, monsters, and magic as you explore the games that defined the night.
+      </p>
     </div>
-    <div class="card fade-in">
-      <img src="https://m.media-amazon.com/images/I/61GZ5v-g7EL._AC_UF1000,1000_QL80_.jpg" alt="Order of Ecclesia">
-      <h3>Order of Ecclesia (2008)</h3>
-      <p>Shanoa wields glyph magic in this fast-paced DS entry praised for its challenge and design.</p>
+
+    <div class="game-entry fade-in">
+      <div class="game-text">
+        <h3>Portrait of Ruin (2006)</h3>
+        <p>Follow Jonathan and Charlotte through magical portraits to stop Dracula’s resurrection. This DS classic blends dual-character gameplay with haunting environments and rich lore.</p>
+      </div>
+      <div class="game-image">
+        <img src="https://m.media-amazon.com/images/I/61h0mJYc+uL._AC_UF1000,1000_QL80_.jpg" alt="Portrait of Ruin">
+      </div>
     </div>
-    <div class="card fade-in">
-      <img src="https://m.media-amazon.com/images/M/MV5BMjAzMjU2MjYzMl5BMl5BanBnXkFtZTgwNTQ4Nzk1NjM@._V1_.jpg" alt="Castlevania Netflix">
-      <h3>Netflix Series (2017–2021)</h3>
-      <p>An animated retelling blending lore, violence, and emotion, keeping the legacy alive for new fans.</p>
+
+    <div class="game-entry fade-in">
+      <div class="game-text">
+        <h3>Order of Ecclesia (2008)</h3>
+        <p>Shanoa wields glyph magic in this fast-paced DS entry praised for its challenge and design. A tale of sacrifice and power, set against a backdrop of gothic decay.</p>
+      </div>
+      <div class="game-image">
+        <img src="https://m.media-amazon.com/images/I/61GZ5v-g7EL._AC_UF1000,1000_QL80_.jpg" alt="Order of Ecclesia">
+      </div>
     </div>
-  </main>
+
+    <div class="game-entry fade-in">
+      <div class="game-text">
+        <h3>Netflix Series (2017–2021)</h3>
+        <p>An animated retelling blending lore, violence, and emotion. With stunning visuals and complex characters, the series keeps the legacy alive for a new generation of fans.</p>
+      </div>
+      <div class="game-image">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjAzMjU2MjYzMl5BMl5BanBnXkFtZTgwNTQ4Nzk1NjM@._V1_.jpg" alt="Castlevania Netflix">
+      </div>
+    </div>
+  </section>
 
   <footer>
     <p>Watch on <a href="https://www.netflix.com/title/80095241" target="_blank">Netflix</a></p>

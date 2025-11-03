@@ -313,17 +313,23 @@ nav a.active {
   line-height: 1.6;
 }
 
-/* ✅ FIXED IMAGE CONTAINMENT */
+/* ✅ FIXED IMAGE CONTAINMENT IN GAME PAGE */
 .game-image {
   flex-shrink: 0;
   max-width: 280px;
+  width: 100%;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .game-image img {
   width: 100%;
   height: auto;
+  max-width: 100%;
   display: block;
   border-radius: 8px;
-  box-shadow: 0 0 10px #b
-
+  box-shadow: 0 0 10px #b30000;
+  object-fit: cover;
+}

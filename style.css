@@ -56,6 +56,15 @@ header h1.mega-title {
   animation: flickerMega 2.5s infinite;
 }
 
+.castle-sub {
+  display: block;
+  font-size: 1.2em;
+  color: #e6d9c3;
+  margin-top: 0.3em;
+  font-family: 'Spectral SC', serif;
+  text-shadow: 0 0 5px #600;
+}
+
 @keyframes flicker {
   0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
   20%, 24%, 55% { opacity: 0.4; }
@@ -210,11 +219,12 @@ nav a.active {
 .timeline-section h2,
 .game-gallery h2,
 .legacy h2 {
-  font-size: 2.2em;
-  color: #ff3333;
+  font-size: 1.8em;
   font-family: 'Cinzel', serif;
-  text-shadow: 0 0 10px #b30000;
-  margin-bottom: 0.5em;
+  color: #ff3333;
+  text-shadow: 0 0 8px #b30000;
+  margin-bottom: 0.3em;
+  margin-top: 1em;
   text-align: center;
 }
 
@@ -293,21 +303,4 @@ nav a.active {
   flex: 1;
 }
 
-.game-text h3 {
-  font-family: 'Cinzel', serif;
-  color: #ff3333;
-  margin-bottom: 0.5em;
-}
-
-.game-text p {
-  font-size: 1.1em;
-  line-height: 1.6;
-}
-
-.game-image img {
-  width: 280px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #b30000;
-}
-
-/* LEGACY PAGE
+.game-text

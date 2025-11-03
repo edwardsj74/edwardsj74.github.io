@@ -11,8 +11,7 @@
 
   <header class="hero-header">
     <div class="hero-overlay">
-      <h1 class="flicker mega-title">Castlevania Chronicles</h1>
-      <p class="subtitle">By Jordan Edwards • CMPT 104</p>
+      <h1 class="flicker mega-title">Castlevania Chronicles</h1
       <nav class="main-nav">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
